@@ -16,7 +16,7 @@ public class extendsTest01
 		System.out.println(s2.getName());
 		System.out.println(s2.getNum());
 		System.out.println(s2.getAddress());
-	//s2的初始化只能一个一个初始化了。
+	//s2的初始化只能一个一个初始化了,因为没有继承构造方法。
 	
 	}
 }
@@ -25,7 +25,9 @@ class student1
 	private int age ;
 	private String name ;
 	private int num;
+	//无参构造方法
 	public student1(){}
+	//有参构造方法
 	public student1(int age,String name,int num)
 	{
 		this.age = age;
