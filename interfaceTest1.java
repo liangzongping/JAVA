@@ -5,7 +5,10 @@
  */
 public class interfaceTest1 {
     public static void main(String[] args) {
-
+    animal a  = new cat();
+    a.fly();
+    test t = new test();
+    //   K x = (K)t;//接口之间没继承关系也可以强转，但这样做虽没有语法错误，但会有ClassCastException；
     }
 }
 interface Mymath{
@@ -24,5 +27,33 @@ class T implements Mymath{
         return a-b;
     }
 }
+class animal{
+    public void fly(){
+
+    }
+}
+interface flyable{
+    void fly();
+}
+
+
+class cat extends animal implements flyable//extends和implements一起用的做法
+{
+    public void fly()
+    {
+        System.out.println("猫会飞");
+    }
+}
+interface K{
+
+}
+interface J{
+
+}
+class test implements J
+{
+
+}
+
 
 
